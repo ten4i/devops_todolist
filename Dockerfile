@@ -1,7 +1,7 @@
 ARG PYTHON_VERSION=3.11
 
 #build stage
-FROM python:${PYTHON_VERSION}-slim as builder
+FROM python:${PYTHON_VERSION}-slim AS builder
 
 WORKDIR /app
 
@@ -20,4 +20,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD [ "python" , "manage.py", "runserver", "0.0.0.0:8080"] 
+CMD [ "python" , "manage.py", "runserver", "0.0.0.0:8080"]
