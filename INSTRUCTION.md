@@ -7,7 +7,7 @@ https://hub.docker.com/r/ten4i/todoapp
 ## Build the image
 
 ```bash
-docker build -t todoapp:1.0.0 .
+docker build -t ten4i/todoapp:1.0.0 .
 ```
 
 ## Run the container
@@ -26,7 +26,8 @@ http://localhost:8080
 
 ## Pull and run from Docker Hub
 
-```bash
-docker pull ten4i/todoapp:1.0.0
+```bashas
+docker push ten4i/todoapp:1.0.0
+docker Pull ten4i/todoapp:1.0.0
 docker run -d -p 8080:8080 ten4i/todoapp:1.0.0
 ```
