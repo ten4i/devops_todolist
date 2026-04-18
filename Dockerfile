@@ -6,7 +6,7 @@ FROM python:${PYTHON_VERSION}-slim AS builder
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --user -r requirements.txt
 
 #run stage 
 FROM python:${PYTHON_VERSION}-slim
@@ -14,6 +14,7 @@ FROM python:${PYTHON_VERSION}-slim
 WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1
+ENV PATH="/root/.local/bin:$PATH"
 
 COPY --from=builder /root/.local /root/.local
 COPY . .
