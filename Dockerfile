@@ -1,7 +1,7 @@
 ARG PYTHON_VERSION=3.11
 
 #build stage
-FROM python:${PYTHON_кеVERSION}-slim as builder
+FROM python:${PYTHON_VERSION}-slim as builder
 
 WORKDIR /app
 
